@@ -520,7 +520,7 @@
                     <li><a href="index.html#games">Games</a></li>
                     <li><a href="index.html#community">Community</a></li>
                     <li><a href="index.html#blog">Blog</a></li>
-                    <li><a href="login.html" class="btn">Login</a></li>
+                    <li><a href="student-login.html" class="btn">Login</a></li>
                 </ul>
                 <div class="mobile-menu">
                     <i class="fas fa-bars"></i>
@@ -834,7 +834,7 @@
                 
                 // Redirect to dashboard after successful login
                 setTimeout(() => {
-                    window.location.href = 'dashboard.html';
+                    window.location.href = 'user-dashboard.html';
                 }, 1500);
                 
             } catch (error) {
@@ -880,7 +880,7 @@
                 return;
             }
             
-            if (password.length < 6) {
+            if (password.length < 8) {
                 showAlert(errorAlert, 'Password must be at least 8 characters long');
                 return;
             }
@@ -938,7 +938,7 @@
                 
                 // Redirect to dashboard after successful registration
                 setTimeout(() => {
-                    window.location.href = 'dashboard.html';
+                    window.location.href = 'user-dashboard.html';
                 }, 3000);
                 
             } catch (error) {
@@ -1015,7 +1015,7 @@
                 
                 // Redirect to dashboard
                 setTimeout(() => {
-                    window.location.href = 'dashboard.html';
+                    window.location.href = 'user-dashboard.html';
                 }, 1500);
                 
             } catch (error) {
@@ -1082,7 +1082,7 @@
                 
                 // Redirect to dashboard
                 setTimeout(() => {
-                    window.location.href = 'dashboard.html';
+                    window.location.href = 'user-dashboard.html';
                 }, 1500);
                 
             } catch (error) {
@@ -1116,7 +1116,7 @@
         auth.onAuthStateChanged((user) => {
             if (user) {
                 // User is signed in, redirect to dashboard
-                window.location.href = 'dashboard.html';
+                window.location.href = 'user-dashboard.html';
             }
         });
     </script>
