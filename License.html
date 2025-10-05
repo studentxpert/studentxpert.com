@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>License | StudentXpert</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #4a6cf7;
+      --secondary: #6c757d;
+      --success: #28a745;
+      --warning: #ffc107;
+      --danger: #dc3545;
+      --light: #f8f9fa;
+      --dark: #212529;
+      --gradient: linear-gradient(135deg, #4a6cf7, #6a11cb);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      background-color: #f5f7ff;
+      color: #333;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    
+    /* Header Styles */
+    header {
+      background: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+    
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+    
+    .nav-links li {
+      margin-left: 30px;
+    }
+    
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+    
+    .mobile-menu {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    
+    /* Hero Section */
+    .license-hero {
+      padding: 180px 0 80px;
+      background: var(--gradient);
+      color: white;
+      text-align: center;
+      margin-top: 70px;
+      border-radius: 0 0 30px 30px;
+    }
+    
+    .license-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: white;
+    }
+    
+    .license-hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+    
+    .license-badges {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    
+    .license-badge {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      backdrop-filter: blur(10px);
+    }
+    
+    /* License Content */
+    .license-content {
+      padding: 80px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+    
+    .license-section {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      padding: 40px;
+    }
+    
+    .license-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .license-section h2 i {
+      font-size: 1.8rem;
+    }
+    
+    .license-text {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 25px;
+      margin: 25px 0;
+      border-left: 4px solid var(--primary);
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      overflow-x: auto;
+      line-height: 1.8;
+    }
+    
+    .simple-terms {
+      list-style: none;
+      margin: 25px 0;
+    }
+    
+    .simple-terms li {
+      margin-bottom: 15px;
+      padding-left: 30px;
+      position: relative;
+    }
+    
+    .simple-terms li:before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--success);
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    
+    .permissions-restrictions {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+    
+    .permissions-card, .restrictions-card {
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .permissions-card {
+      background: rgba(40, 167, 69, 0.1);
+      border-left: 4px solid var(--success);
+    }
+    
+    .restrictions-card {
+      background: rgba(220, 53, 69, 0.1);
+      border-left: 4px solid var(--danger);
+    }
+    
+    .permissions-card h3, .restrictions-card h3 {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .permissions-card ul, .restrictions-card ul {
+      list-style: none;
+    }
+    
+    .permissions-card li, .restrictions-card li {
+      margin-bottom: 10px;
+      padding-left: 25px;
+      position: relative;
+    }
+    
+    .permissions-card li:before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--success);
+      font-weight: bold;
+    }
+    
+    .restrictions-card li:before {
+      content: '✗';
+      position: absolute;
+      left: 0;
+      color: var(--danger);
+      font-weight: bold;
+    }
+    
+    .cta-section {
+      text-align: center;
+      padding: 40px;
+      background: var(--gradient);
+      color: white;
+      border-radius: 10px;
+    }
+    
+    .cta-section h2 {
+      color: white;
+      margin-bottom: 15px;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background: white;
+      color: var(--primary);
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+      margin-top: 15px;
+    }
+    
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+    }
+    
+    /* FAQ Section */
+    .faq-section {
+      margin-top: 40px;
+    }
+    
+    .faq-item {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 20px;
+    }
+    
+    .faq-question {
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+    }
+    
+    .faq-answer {
+      margin-top: 10px;
+      display: none;
+    }
+    
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 60px 0 30px;
+      margin-top: auto;
+    }
+    
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+    
+    .footer-column h3 {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-links a {
+      color: #adb5bd;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .footer-links a:hover {
+      color: white;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: white;
+      transition: all 0.3s;
+    }
+    
+    .social-links a:hover {
+      background: var(--primary);
+      transform: translateY(-3px);
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.9rem;
+      color: #adb5bd;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .nav-links.active {
+        display: flex;
+      }
+      
+      .nav-links li {
+        margin: 10px 0;
+      }
+      
+      .mobile-menu {
+        display: block;
+      }
+      
+      .license-hero h1 {
+        font-size: 2.2rem;
+      }
+      
+      .license-section {
+        padding: 25px;
+      }
+      
+      .permissions-restrictions {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo">StudentXpert</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#study-tools">Study Tools</a></li>
+          <li><a href="index.html#coupons">Coupons</a></li>
+          <li><a href="ai-tools.html">AI Tools</a></li>
+          <li><a href="index.html#games">Games</a></li>
+          <li><a href="index.html#community">Community</a></li>
+          <li><a href="index.html#blog">Blog</a></li>
+          <li><a href="dashboard.html" class="btn">Dashboard</a></li>
+        </ul>
+        <div class="mobile-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="license-hero">
+    <div class="container">
+      <h1>Open Source License</h1>
+      <p>StudentXpert is proudly open-source, empowering developers and students worldwide to learn, modify, and build upon our platform.</p>
+      
+      <div class="license-badges">
+        <div class="license-badge"><i class="fas fa-lock-open"></i> Open Source</div>
+        <div class="license-badge"><i class="fas fa-balance-scale"></i> MIT Licensed</div>
+        <div class="license-badge"><i class="fas fa-code-branch"></i> Free to Modify</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- License Content -->
+  <section class="license-content">
+    <div class="container">
+      <div class="license-section">
+        <h2><i class="fas fa-scroll"></i> MIT License</h2>
+        <p>Copyright © 2025 StudentXpert</p>
+        
+        <p>This project is open-source and licensed under the MIT License, which allows anyone to freely use, modify, and distribute this software with proper credit.</p>
+        
+        <div class="license-text">
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+        </div>
+      </div>
+      
+      <div class="license-section">
+        <h2><i class="fas fa-gavel"></i> In Simple Terms</h2>
+        <p>The MIT License is one of the most permissive open-source licenses. Here's what it means for you:</p>
+        
+        <ul class="simple-terms">
+          <li>You can use, copy, modify, and share this project freely.</li>
+          <li>You can even use it commercially with proper credit.</li>
+          <li>You must keep this license and the copyright notice.</li>
+          <li>There is no warranty — use it at your own risk.</li>
+          <li>You're not required to share your modifications.</li>
+          <li>You can distribute the software under a different license, but the MIT license still applies to the original.</li>
+        </ul>
+        
+        <div class="permissions-restrictions">
+          <div class="permissions-card">
+            <h3><i class="fas fa-check-circle"></i> Permissions</h3>
+            <ul>
+              <li>Commercial use</li>
+              <li>Modification</li>
+              <li>Distribution</li>
+              <li>Private use</li>
+              <li>Sublicensing</li>
+            </ul>
+          </div>
+          
+          <div class="restrictions-card">
+            <h3><i class="fas fa-times-circle"></i> Restrictions</h3>
+            <ul>
+              <li>No liability</li>
+              <li>No warranty</li>
+              <li>Must include license</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="license-section">
+        <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Can I use StudentXpert code in my commercial project?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! The MIT License explicitly allows commercial use. You can use StudentXpert code in your commercial projects without any restrictions, as long as you include the original copyright notice and license.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Do I need to open-source my modifications?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>No, the MIT License does not require you to open-source your modifications. You can keep your changes private if you wish.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What attribution is required?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>You must include the original copyright notice and a copy of the MIT License in any substantial portion of the software you distribute.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Can I remove the StudentXpert branding?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, you can modify the code and remove branding, but you must still include the original copyright notice in your documentation or about section.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="cta-section">
+        <h2>Want to contribute to StudentXpert?</h2>
+        <p>Join our open-source community and help us improve education technology for students worldwide.</p>
+        <a href="https://github.com/studentxpert" class="btn" target="_blank">
+          <i class="fab fa-github"></i> View on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>StudentXpert</h3>
+          <p>Your all-in-one platform for learning, earning, and having fun as a student.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#study-tools">Study Tools</a></li>
+            <li><a href="index.html#coupons">Coupons</a></li>
+            <li><a href="ai-tools.html">AI Tools</a></li>
+            <li><a href="index.html#games">Games</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Support</h3>
+          <ul class="footer-links">
+            <li><a href="help-center.html">Help Center</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="community.html">Community</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Legal</h3>
+          <ul class="footer-links">
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+            <li><a href="license.html" style="color: white;">License</a></li>
+            <li><a href="cookie-policy.html">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© 2025 StudentXpert. Licensed under the <a href="https://opensource.org/licenses/MIT" target="_blank" style="color: #adb5bd;">MIT License</a>.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.querySelector('.mobile-menu').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+    
+    // FAQ toggle functionality
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', function() {
+        const faqItem = this.parentElement;
+        faqItem.classList.toggle('active');
+        
+        const icon = this.querySelector('i');
+        if (faqItem.classList.contains('active')) {
+          icon.classList.remove('fa-chevron-down');
+          icon.classList.add('fa-chevron-up');
+        } else {
+          icon.classList.remove('fa-chevron-up');
+          icon.classList.add('fa-chevron-down');
+        }
+      });
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if(targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if(targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 100,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
