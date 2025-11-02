@@ -504,6 +504,16 @@
                 flex-direction: column;
             }
         }
+
+         .cf-turnstile {
+              display: flex;
+              justify-content: center;
+              margin: 15px auto;
+              position: relative;
+              bottom: auto;
+              left: auto;
+         }
+        
     </style>
 </head>
 <body>
@@ -599,6 +609,12 @@
                                     </button>
                                 </div>
                             </div>
+
+  <div class="cf-turnstile" data-sitekey="0x4AAAAAAB4BOhbX14gA4dwi"></div>
+
+<!-- Turnstile JS -->
+
+                            
                         </form>
                         
                         <!-- Registration Form -->
@@ -1106,5 +1122,8 @@
             }
         });
     </script>
+
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    
 </body>
 </html>
